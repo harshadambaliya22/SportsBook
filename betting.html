@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sportsbook</title>
+        <!-- all css -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="assets/css/all.min.css" />
+        <link rel="stylesheet" href="assets/css/slick.css" />
+        <link rel="stylesheet" href="assets/css/sytle.css" />
+    </head>
+    <body>
+        <!-- header start -->
+        <header class="sb-header-section">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Sports</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Casino</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">LIVE CASINO</a>
+                            </li>
+                            <li class="nav-item has-submenu">
+                                <a class="nav-link" href="#"> MORE </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sb-header-right">
+                        <ul class="sb-header-right-list">
+                            <li class="sb-header-right-item">
+                                <a class="sb-header-right-link" href="#">
+                                    <span class="sb-header-right-link-icon">
+                                        <svg width="23" height="23" viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M10.6375 0C5.78631 0.00472662 3.27629 0.0915193 1.68391 1.68391C0.0915193 3.27629 0.00472662 5.78631 0 10.6375H5.65069C5.24706 10.1334 4.94548 9.53868 4.78103 8.88084C4.16202 6.40481 6.40481 4.16202 8.88084 4.78103C9.53868 4.94548 10.1334 5.24706 10.6375 5.65069V0Z" />
+                                            <path d="M0 12.3626C0.00472662 17.2137 0.0915193 19.7237 1.68391 21.3161C3.27629 22.9085 5.78631 22.9953 10.6375 23V13.9423C9.74086 15.7332 7.88897 16.9627 5.74987 16.9627C5.27351 16.9627 4.88735 16.5765 4.88735 16.1002C4.88735 15.6238 5.27351 15.2377 5.74987 15.2377C7.51722 15.2377 8.99808 14.0109 9.38745 12.3626H0Z" />
+                                            <path d="M12.3626 23C17.2137 22.9953 19.7237 22.9085 21.3161 21.3161C22.9085 19.7237 22.9953 17.2137 23 12.3626H13.6125C14.0019 14.0109 15.4828 15.2377 17.2502 15.2377C17.7265 15.2377 18.1127 15.6238 18.1127 16.1002C18.1127 16.5765 17.7265 16.9627 17.2502 16.9627C15.111 16.9627 13.2591 15.7332 12.3626 13.9423V23Z" />
+                                            <path d="M23 10.6375C22.9953 5.78631 22.9085 3.27629 21.3161 1.68391C19.7237 0.0915193 17.2137 0.00472662 12.3626 0V5.65069C12.8668 5.24706 13.4614 4.94548 14.1191 4.78103C16.5953 4.16202 18.838 6.40481 18.219 8.88084C18.0545 9.53868 17.753 10.1334 17.3493 10.6375H23Z" />
+                                            <path d="M8.46245 6.45456C9.74074 6.77413 10.6375 7.92267 10.6375 9.24025V10.6375H9.24025C7.92267 10.6375 6.77413 9.74074 6.45456 8.46245C6.1514 7.24982 7.24982 6.1514 8.46245 6.45456Z" />
+                                            <path d="M12.3626 9.24025V10.6375H13.7597C15.0773 10.6375 16.2259 9.74074 16.5455 8.46245C16.8486 7.24982 15.7502 6.1514 14.5376 6.45456C13.2593 6.77413 12.3626 7.92267 12.3626 9.24025Z" />
+                                        </svg>
+                                    </span>
+                                    <span class="sb-header-right-link-text">Promotions</span>
+                                </a>
+                            </li>
+                            <li class="sb-header-right-item">
+                                <a class="sb-header-right-link" href="#">
+                                    <span class="sb-header-right-link-icon">
+                                        <svg width="23" height="23" viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M10.6375 0C5.78631 0.00472662 3.27629 0.0915194 1.68391 1.68391C0.0915194 3.27629 0.00472662 5.78631 0 10.6375H5.65069C5.24706 10.1334 4.94548 9.53868 4.78103 8.88084C4.16202 6.40481 6.40481 4.16202 8.88084 4.78103C9.53868 4.94548 10.1334 5.24706 10.6375 5.65069V0Z" />
+                                            <path d="M0 12.3626C0.00472662 17.2137 0.0915194 19.7237 1.68391 21.3161C3.27629 22.9085 5.78631 22.9953 10.6375 23V13.9423C9.74086 15.7332 7.88897 16.9627 5.74987 16.9627C5.27351 16.9627 4.88735 16.5765 4.88735 16.1002C4.88735 15.6238 5.27351 15.2377 5.74987 15.2377C7.51722 15.2377 8.99808 14.0109 9.38745 12.3626H0Z" />
+                                            <path d="M12.3626 23C17.2137 22.9953 19.7237 22.9085 21.3161 21.3161C22.9085 19.7237 22.9953 17.2137 23 12.3626H13.6125C14.0019 14.0109 15.4828 15.2377 17.2502 15.2377C17.7265 15.2377 18.1127 15.6238 18.1127 16.1002C18.1127 16.5765 17.7265 16.9627 17.2502 16.9627C15.111 16.9627 13.2591 15.7332 12.3626 13.9423V23Z" />
+                                            <path d="M23 10.6375C22.9953 5.78631 22.9085 3.27629 21.3161 1.68391C19.7237 0.0915194 17.2137 0.00472662 12.3626 0V5.65069C12.8668 5.24706 13.4614 4.94548 14.1191 4.78103C16.5953 4.16202 18.838 6.40481 18.219 8.88084C18.0545 9.53868 17.753 10.1334 17.3493 10.6375H23Z" />
+                                            <path d="M8.46245 6.45456C9.74074 6.77413 10.6375 7.92267 10.6375 9.24025V10.6375H9.24025C7.92267 10.6375 6.77413 9.74074 6.45456 8.46245C6.1514 7.24982 7.24982 6.1514 8.46245 6.45456Z" />
+                                            <path d="M12.3626 9.24025V10.6375H13.7597C15.0773 10.6375 16.2259 9.74074 16.5455 8.46245C16.8486 7.24982 15.7502 6.1514 14.5376 6.45456C13.2593 6.77413 12.3626 7.92267 12.3626 9.24025Z" />
+                                        </svg>
+                                    </span>
+                                    <span class="sb-header-right-link-text">News</span>
+                                </a>
+                            </li>
+                            <li class="sb-header-right-item sb-header-language has-submenu">
+                                <a class="sb-header-right-link" href="#">
+                                    <span class="sb-header-language-flag">
+                                        <img src="assets/images/header-flag.png" class="img-fluid" alt="language flag" />
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="sb-header-right-item sb-header-signin">
+                                <a class="btn btn-light" href="#"> Sign In </a>
+                            </li>
+                            <li class="sb-header-right-item sb-header-signup">
+                                <a class="btn btn-primary" href="#"> Sign Up </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- header end -->
+
+        <!-- main content start -->
+        <main class="sb-main">
+            <div class="sb-main-wrapper">
+                <!-- left sidebar start -->
+                <aside class="sb-left-sidebar">
+                    <div class="sb-sidebar-search">
+                        <form class="sb-sidebar-search-form">
+                            <input type="text" class="form-control" placeholder="Search" />
+                            <span class="sb-sidebar-search-icon">
+                                <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.70833 15.1877C12.2061 15.1877 15.0417 12.3521 15.0417 8.85433C15.0417 5.35653 12.2061 2.521 8.70833 2.521C5.21053 2.521 2.375 5.35653 2.375 8.85433C2.375 12.3521 5.21053 15.1877 8.70833 15.1877Z" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M16.6254 16.7709L13.1816 13.3271" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </form>
+                    </div>
+
+                    <div class="sb-sidebar-widget">
+                        <div class="sb-sidebar-widget-title">
+                            <span class="sb-sidebar-widget-title-icon">
+                                <img src="assets/images/sidebar-home-icon.png" class="img-fluid" alt="sidebar home" />
+                            </span>
+                            <h5 class="sb-sidebar-widget-title-text">Quick Links</h5>
+                        </div>
+                        <ul class="sb-sidebar-widget-list">
+                            <li class="sb-sidebar-widget-item">
+                                <a href="#" class="sb-sidebar-widget-link">
+                                    <span class="sb-sidebar-widget-link-icon">
+                                        <img src="assets/images/sidebar-football-icon.png" class="img-fluid" alt="sidebar football" />
+                                    </span>
+                                    <span class="sb-sidebar-widget-link-text">Summaries.Summaries. Groups.EURO 2024 </span>
+                                </a>
+                            </li>
+                            <li class="sb-sidebar-widget-item">
+                                <a href="#" class="sb-sidebar-widget-link">
+                                    <span class="sb-sidebar-widget-link-icon">
+                                        <img src="assets/images/sidebar-football-icon.png" class="img-fluid" alt="sidebar football" />
+                                    </span>
+                                    <span class="sb-sidebar-widget-link-text">America Cup. Group Stage</span>
+                                </a>
+                            </li>
+                            <li class="sb-sidebar-widget-item">
+                                <a href="#" class="sb-sidebar-widget-link">
+                                    <span class="sb-sidebar-widget-link-icon">
+                                        <img src="assets/images/sidebar-football-icon.png" class="img-fluid" alt="sidebar football" />
+                                    </span>
+                                    <span class="sb-sidebar-widget-link-text">Argentina.Copa Argentina </span>
+                                </a>
+                            </li>
+                            <li class="sb-sidebar-widget-item">
+                                <a href="#" class="sb-sidebar-widget-link">
+                                    <span class="sb-sidebar-widget-link-icon">
+                                        <img src="assets/images/sidebar-football-icon-2.png" class="img-fluid" alt="sidebar football" />
+                                    </span>
+                                    <span class="sb-sidebar-widget-link-text">USA.NHL </span>
+                                </a>
+                            </li>
+                            <li class="sb-sidebar-widget-item">
+                                <a href="#" class="sb-sidebar-widget-link">
+                                    <span class="sb-sidebar-widget-link-icon">
+                                        <img src="assets/images/sidebar-football-icon-2.png" class="img-fluid" alt="sidebar football" />
+                                    </span>
+                                    <span class="sb-sidebar-widget-link-text">USA.MLB </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sb-sidebar-widget">
+                        <div class="sb-sidebar-widget-title">
+                            <span class="sb-sidebar-widget-title-icon">
+                                <img src="assets/images/sidebar-football-icon.png" class="img-fluid" alt="sidebar football" />
+                            </span>
+                            <h5 class="sb-sidebar-widget-title-text">Top League</h5>
+                        </div>
+                        <ul class="sb-sidebar-widget-list">
+                            <li class="sb-sidebar-widget-item">
+                                <a href="#" class="sb-sidebar-widget-link">
+                                    <span class="sb-sidebar-widget-link-icon">
+                                        <img src="assets/images/sidebar-football-icon-1.png" class="img-fluid" alt="sidebar football" />
+                                    </span>
+                                    <span class="sb-sidebar-widget-link-text">Euro 2024 </span>
+                                </a>
+                            </li>
+                            <li class="sb-sidebar-widget-item">
+                                <a href="#" class="sb-sidebar-widget-link">
+                                    <span class="sb-sidebar-widget-link-icon">
+                                        <img src="assets/images/sidebar-football-icon-1.png" class="img-fluid" alt="sidebar football" />
+                                    </span>
+                                    <span class="sb-sidebar-widget-link-text">Champions League</span>
+                                </a>
+                            </li>
+                            <li class="sb-sidebar-widget-item">
+                                <a href="#" class="sb-sidebar-widget-link">
+                                    <span class="sb-sidebar-widget-link-icon">
+                                        <img src="assets/images/sidebar-football-icon-1.png" class="img-fluid" alt="sidebar football" />
+                                    </span>
+                                    <span class="sb-sidebar-widget-link-text">Europa Conference League </span>
+                                </a>
+                            </li>
+                            <li class="sb-sidebar-widget-item">
+                                <a href="#" class="sb-sidebar-widget-link">
+                                    <span class="sb-sidebar-widget-link-icon">
+                                        <img src="assets/images/sidebar-football-icon-2.png" class="img-fluid" alt="sidebar football" />
+                                    </span>
+                                    <span class="sb-sidebar-widget-link-text">Premier League </span>
+                                </a>
+                            </li>
+                            <li class="sb-sidebar-widget-item">
+                                <a href="#" class="sb-sidebar-widget-link">
+                                    <span class="sb-sidebar-widget-link-icon">
+                                        <img src="assets/images/sidebar-football-icon-2.png" class="img-fluid" alt="sidebar football" />
+                                    </span>
+                                    <span class="sb-sidebar-widget-link-text">USA.MLB </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sb-sidebar-widget sb-sidebar-sports-widget">
+                        <div class="sb-sidebar-widget-title">
+                            <span class="sb-sidebar-widget-title-icon">
+                                <img src="assets/images/sidebar-tenis-icon.png" class="img-fluid" alt="sidebar tenis" />
+                            </span>
+                            <h5 class="sb-sidebar-widget-title-text">Sports</h5>
+                        </div>
+                        <ul class="sb-sidebar-widget-list nav nav-pills" id="sidebarSportTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="sport-all-tab" data-bs-toggle="pill" data-bs-target="#sport-all" type="button" role="tab" aria-controls="sport-all" aria-selected="true">All</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="sport-1h-tab" data-bs-toggle="pill" data-bs-target="#sport-1h" type="button" role="tab" aria-controls="sport-1h" aria-selected="false">1h</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="sport-3h-tab" data-bs-toggle="pill" data-bs-target="#sport-3h" type="button" role="tab" aria-controls="sport-3h" aria-selected="false">3h</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="sport-6h-tab" data-bs-toggle="pill" data-bs-target="#sport-6h" type="button" role="tab" aria-controls="sport-6h" aria-selected="false">6h</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="sport-12h-tab" data-bs-toggle="pill" data-bs-target="#sport-12h" type="button" role="tab" aria-controls="sport-12h" aria-selected="false">12h</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="sport-24h-tab" data-bs-toggle="pill" data-bs-target="#sport-24h" type="button" role="tab" aria-controls="sport-24h" aria-selected="false">24h</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="sidebarSportTabContent">
+                            <div class="tab-pane fade show active" id="sport-all" role="tabpanel" aria-labelledby="sport-all-tab" tabindex="0">
+                                <ul class="sb-sidebar-widget-list">
+                                    <li class="sb-sidebar-widget-item">
+                                        <a href="#" class="sb-sidebar-widget-link">
+                                            <div class="sb-sidebar-widget-link-title">
+                                                <span class="sb-sidebar-widget-link-icon">
+                                                    <img src="assets/images/footsal-icon.png" class="img-fluid" alt="sidebar football icon" />
+                                                </span>
+                                                <span class="sb-sidebar-widget-link-text">football</span>
+                                            </div>
+                                            <span class="sb-sidebar-widget-link-count">682</span>
+                                        </a>
+                                    </li>
+                                    <li class="sb-sidebar-widget-item">
+                                        <a href="#" class="sb-sidebar-widget-link">
+                                            <div class="sb-sidebar-widget-link-title">
+                                                <span class="sb-sidebar-widget-link-icon">
+                                                    <img src="assets/images/basket-icon.png" class="img-fluid" alt="sidebar Basketball icon" />
+                                                </span>
+                                                <span class="sb-sidebar-widget-link-text">Basketball</span>
+                                            </div>
+                                            <span class="sb-sidebar-widget-link-count">682</span>
+                                        </a>
+                                    </li>
+                                    <li class="sb-sidebar-widget-item">
+                                        <a href="#" class="sb-sidebar-widget-link">
+                                            <div class="sb-sidebar-widget-link-title">
+                                                <span class="sb-sidebar-widget-link-icon">
+                                                    <img src="assets/images/volleyball-icon.png" class="img-fluid" alt="sidebar volleyball icon" />
+                                                </span>
+                                                <span class="sb-sidebar-widget-link-text">volleyball</span>
+                                            </div>
+                                            <span class="sb-sidebar-widget-link-count">682</span>
+                                        </a>
+                                    </li>
+                                    <li class="sb-sidebar-widget-item">
+                                        <a href="#" class="sb-sidebar-widget-link">
+                                            <div class="sb-sidebar-widget-link-title">
+                                                <span class="sb-sidebar-widget-link-icon">
+                                                    <img src="assets/images/hocky-icon.png" class="img-fluid" alt="sidebar Hockey icon" />
+                                                </span>
+                                                <span class="sb-sidebar-widget-link-text">Hockey</span>
+                                            </div>
+                                            <span class="sb-sidebar-widget-link-count">682</span>
+                                        </a>
+                                    </li>
+                                    <li class="sb-sidebar-widget-item">
+                                        <a href="#" class="sb-sidebar-widget-link">
+                                            <div class="sb-sidebar-widget-link-title">
+                                                <span class="sb-sidebar-widget-link-icon">
+                                                    <img src="assets/images/tennis-icon.png" class="img-fluid" alt="sidebar Tennis icon" />
+                                                </span>
+                                                <span class="sb-sidebar-widget-link-text">Tennis</span>
+                                            </div>
+                                            <span class="sb-sidebar-widget-link-count">682</span>
+                                        </a>
+                                    </li>
+                                    <li class="sb-sidebar-widget-item">
+                                        <a href="#" class="sb-sidebar-widget-link">
+                                            <div class="sb-sidebar-widget-link-title">
+                                                <span class="sb-sidebar-widget-link-icon">
+                                                    <img src="assets/images/table-tennis-icon.png" class="img-fluid" alt="sidebar Table tennis icon" />
+                                                </span>
+                                                <span class="sb-sidebar-widget-link-text">Table tennis </span>
+                                            </div>
+                                            <span class="sb-sidebar-widget-link-count">682</span>
+                                        </a>
+                                    </li>
+                                    <li class="sb-sidebar-widget-item">
+                                        <a href="#" class="sb-sidebar-widget-link">
+                                            <div class="sb-sidebar-widget-link-title">
+                                                <span class="sb-sidebar-widget-link-icon">
+                                                    <img src="assets/images/hand-hallyball-icon.png" class="img-fluid" alt="sidebar handball icon" />
+                                                </span>
+                                                <span class="sb-sidebar-widget-link-text">Handball </span>
+                                            </div>
+                                            <span class="sb-sidebar-widget-link-count">682</span>
+                                        </a>
+                                    </li>
+                                    <li class="sb-sidebar-widget-item">
+                                        <a href="#" class="sb-sidebar-widget-link">
+                                            <div class="sb-sidebar-widget-link-title">
+                                                <span class="sb-sidebar-widget-link-icon">
+                                                    <img src="assets/images/rugby-icon.png" class="img-fluid" alt="sidebar rugby icon" />
+                                                </span>
+                                                <span class="sb-sidebar-widget-link-text">rugby </span>
+                                            </div>
+                                            <span class="sb-sidebar-widget-link-count">682</span>
+                                        </a>
+                                    </li>
+                                    <li class="sb-sidebar-widget-item">
+                                        <a href="#" class="sb-sidebar-widget-link">
+                                            <div class="sb-sidebar-widget-link-title">
+                                                <span class="sb-sidebar-widget-link-icon">
+                                                    <img src="assets/images/waterpolo-icon.png" class="img-fluid" alt="sidebar waterpolo icon" />
+                                                </span>
+                                                <span class="sb-sidebar-widget-link-text">waterpolo </span>
+                                            </div>
+                                            <span class="sb-sidebar-widget-link-count">682</span>
+                                        </a>
+                                    </li>
+                                    <li class="sb-sidebar-widget-item">
+                                        <a href="#" class="sb-sidebar-widget-link">
+                                            <div class="sb-sidebar-widget-link-title">
+                                                <span class="sb-sidebar-widget-link-icon">
+                                                    <img src="assets/images/baseball-icon.png" class="img-fluid" alt="sidebar Baseball icon" />
+                                                </span>
+                                                <span class="sb-sidebar-widget-link-text">Baseball </span>
+                                            </div>
+                                            <span class="sb-sidebar-widget-link-count">682</span>
+                                        </a>
+                                    </li>
+                                    <li class="sb-sidebar-widget-item">
+                                        <a href="#" class="sb-sidebar-widget-link">
+                                            <div class="sb-sidebar-widget-link-title">
+                                                <span class="sb-sidebar-widget-link-icon">
+                                                    <img src="assets/images/esport-icon.png" class="img-fluid" alt="sidebar eSports icon" />
+                                                </span>
+                                                <span class="sb-sidebar-widget-link-text">eSports </span>
+                                            </div>
+                                            <span class="sb-sidebar-widget-link-count">682</span>
+                                        </a>
+                                    </li>
+                                    <li class="sb-sidebar-widget-item">
+                                        <a href="#" class="sb-sidebar-widget-link">
+                                            <div class="sb-sidebar-widget-link-title">
+                                                <span class="sb-sidebar-widget-link-icon">
+                                                    <img src="assets/images/cricket-icon.png" class="img-fluid" alt="sidebar Cricket icon" />
+                                                </span>
+                                                <span class="sb-sidebar-widget-link-text">Cricket </span>
+                                            </div>
+                                            <span class="sb-sidebar-widget-link-count">682</span>
+                                        </a>
+                                    </li>
+                                    <li class="sb-sidebar-widget-item">
+                                        <a href="#" class="sb-sidebar-widget-link">
+                                            <div class="sb-sidebar-widget-link-title">
+                                                <span class="sb-sidebar-widget-link-icon">
+                                                    <img src="assets/images/am-football-icon.png" class="img-fluid" alt="sidebar Am football icon" />
+                                                </span>
+                                                <span class="sb-sidebar-widget-link-text">Am.football </span>
+                                            </div>
+                                            <span class="sb-sidebar-widget-link-count">682</span>
+                                        </a>
+                                    </li>
+                                    <li class="sb-sidebar-widget-item">
+                                        <a href="#" class="sb-sidebar-widget-link">
+                                            <div class="sb-sidebar-widget-link-title">
+                                                <span class="sb-sidebar-widget-link-icon">
+                                                    <img src="assets/images/racing-icon.png" class="img-fluid" alt="sidebar Racing icon" />
+                                                </span>
+                                                <span class="sb-sidebar-widget-link-text">Racing </span>
+                                            </div>
+                                            <span class="sb-sidebar-widget-link-count">682</span>
+                                        </a>
+                                    </li>
+                                    <li class="sb-sidebar-widget-item">
+                                        <a href="#" class="sb-sidebar-widget-link">
+                                            <div class="sb-sidebar-widget-link-title">
+                                                <span class="sb-sidebar-widget-link-icon">
+                                                    <img src="assets/images/footsal-icon.png" class="img-fluid" alt="sidebar Futsal icon" />
+                                                </span>
+                                                <span class="sb-sidebar-widget-link-text">Futsal </span>
+                                            </div>
+                                            <span class="sb-sidebar-widget-link-count">682</span>
+                                        </a>
+                                    </li>
+                                    <li class="sb-sidebar-widget-item">
+                                        <a href="#" class="sb-sidebar-widget-link">
+                                            <div class="sb-sidebar-widget-link-title">
+                                                <span class="sb-sidebar-widget-link-icon">
+                                                    <img src="assets/images/golf-icon.png" class="img-fluid" alt="sidebar Golf icon" />
+                                                </span>
+                                                <span class="sb-sidebar-widget-link-text">Golf </span>
+                                            </div>
+                                            <span class="sb-sidebar-widget-link-count">682</span>
+                                        </a>
+                                    </li>
+                                    <li class="sb-sidebar-widget-item">
+                                        <a href="#" class="sb-sidebar-widget-link">
+                                            <div class="sb-sidebar-widget-link-title">
+                                                <span class="sb-sidebar-widget-link-icon">
+                                                    <img src="assets/images/snooker-icon.png" class="img-fluid" alt="sidebar Snooker icon" />
+                                                </span>
+                                                <span class="sb-sidebar-widget-link-text">Snooker </span>
+                                            </div>
+                                            <span class="sb-sidebar-widget-link-count">682</span>
+                                        </a>
+                                    </li>
+                                    <li class="sb-sidebar-widget-item">
+                                        <a href="#" class="sb-sidebar-widget-link">
+                                            <div class="sb-sidebar-widget-link-title">
+                                                <span class="sb-sidebar-widget-link-icon">
+                                                    <img src="assets/images/boxing-icon.png" class="img-fluid" alt="sidebar Boxing icon" />
+                                                </span>
+                                                <span class="sb-sidebar-widget-link-text">Boxing </span>
+                                            </div>
+                                            <span class="sb-sidebar-widget-link-count">682</span>
+                                        </a>
+                                    </li>
+                                    <li class="sb-sidebar-widget-item">
+                                        <a href="#" class="sb-sidebar-widget-link">
+                                            <div class="sb-sidebar-widget-link-title">
+                                                <span class="sb-sidebar-widget-link-icon">
+                                                    <img src="assets/images/badmiton-icon.png" class="img-fluid" alt="sidebar Badminton icon" />
+                                                </span>
+                                                <span class="sb-sidebar-widget-link-text">Badminton </span>
+                                            </div>
+                                            <span class="sb-sidebar-widget-link-count">682</span>
+                                        </a>
+                                    </li>
+                                    <li class="sb-sidebar-widget-item">
+                                        <a href="#" class="sb-sidebar-widget-link">
+                                            <div class="sb-sidebar-widget-link-title">
+                                                <span class="sb-sidebar-widget-link-icon">
+                                                    <img src="assets/images/darts-icon.png" class="img-fluid" alt="sidebar Darts icon" />
+                                                </span>
+                                                <span class="sb-sidebar-widget-link-text">Darts </span>
+                                            </div>
+                                            <span class="sb-sidebar-widget-link-count">682</span>
+                                        </a>
+                                    </li>
+                                    <li class="sb-sidebar-widget-item">
+                                        <a href="#" class="sb-sidebar-widget-link">
+                                            <div class="sb-sidebar-widget-link-title">
+                                                <span class="sb-sidebar-widget-link-icon">
+                                                    <img src="assets/images/beach-volley-icon.png" class="img-fluid" alt="sidebar Beach volley icon" />
+                                                </span>
+                                                <span class="sb-sidebar-widget-link-text">Beach volley </span>
+                                            </div>
+                                            <span class="sb-sidebar-widget-link-count">682</span>
+                                        </a>
+                                    </li>
+                                    <li class="sb-sidebar-widget-item">
+                                        <a href="#" class="sb-sidebar-widget-link">
+                                            <div class="sb-sidebar-widget-link-title">
+                                                <span class="sb-sidebar-widget-link-icon">
+                                                    <img src="assets/images/chess-icon.png" class="img-fluid" alt="sidebar Chess icon" />
+                                                </span>
+                                                <span class="sb-sidebar-widget-link-text">Chess </span>
+                                            </div>
+                                            <span class="sb-sidebar-widget-link-count">682</span>
+                                        </a>
+                                    </li>
+                                    <li class="sb-sidebar-widget-item">
+                                        <a href="#" class="sb-sidebar-widget-link">
+                                            <div class="sb-sidebar-widget-link-title">
+                                                <span class="sb-sidebar-widget-link-icon">
+                                                    <img src="assets/images/cycling-icon.png" class="img-fluid" alt="sidebar Cycling icon" />
+                                                </span>
+                                                <span class="sb-sidebar-widget-link-text">Cycling </span>
+                                            </div>
+                                            <span class="sb-sidebar-widget-link-count">682</span>
+                                        </a>
+                                    </li>
+                                    <li class="sb-sidebar-widget-item">
+                                        <a href="#" class="sb-sidebar-widget-link">
+                                            <div class="sb-sidebar-widget-link-title">
+                                                <span class="sb-sidebar-widget-link-icon">
+                                                    <img src="assets/images/fights-icon.png" class="img-fluid" alt="sidebar Fights icon" />
+                                                </span>
+                                                <span class="sb-sidebar-widget-link-text">Fights </span>
+                                            </div>
+                                            <span class="sb-sidebar-widget-link-count">682</span>
+                                        </a>
+                                    </li>
+                                    <li class="sb-sidebar-widget-item">
+                                        <a href="#" class="sb-sidebar-widget-link">
+                                            <div class="sb-sidebar-widget-link-title">
+                                                <span class="sb-sidebar-widget-link-icon">
+                                                    <img src="assets/images/floorball-icon.png" class="img-fluid" alt="sidebar Floorball icon" />
+                                                </span>
+                                                <span class="sb-sidebar-widget-link-text">Floorball </span>
+                                            </div>
+                                            <span class="sb-sidebar-widget-link-count">682</span>
+                                        </a>
+                                    </li>
+                                    <li class="sb-sidebar-widget-item">
+                                        <a href="#" class="sb-sidebar-widget-link">
+                                            <div class="sb-sidebar-widget-link-title">
+                                                <span class="sb-sidebar-widget-link-icon">
+                                                    <img src="assets/images/field-hocky-icon.png" class="img-fluid" alt="sidebar Field hockey icon" />
+                                                </span>
+                                                <span class="sb-sidebar-widget-link-text">Field hockey </span>
+                                            </div>
+                                            <span class="sb-sidebar-widget-link-count">682</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab-pane fade" id="sport-1h" role="tabpanel" aria-labelledby="sport-1h-tab" tabindex="0">...</div>
+                            <div class="tab-pane fade" id="sport-3h" role="tabpanel" aria-labelledby="sport-3h-tab" tabindex="0">...</div>
+                            <div class="tab-pane fade" id="sport-6h" role="tabpanel" aria-labelledby="sport-6h-tab" tabindex="0">...</div>
+                            <div class="tab-pane fade" id="sport-12h" role="tabpanel" aria-labelledby="sport-12h-tab" tabindex="0">...</div>
+                            <div class="tab-pane fade" id="sport-24h" role="tabpanel" aria-labelledby="sport-24h-tab" tabindex="0">...</div>
+                        </div>
+                    </div>
+                </aside>
+                <!-- left sidebar end -->
+                <!-- main content start -->
+                <div class="sb-main-content"></div>
+                <!-- main content end -->
+                <div class="sb-right-sidebar"></div>
+            </div>
+        </main>
+        <!-- main content end -->
+
+        <!-- All Js -->
+        <script src="assets/js/jquery-3.7.1.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/slick.min.js"></script>
+        <script src="assets/js/custom.js"></script>
+    </body>
+</html>
