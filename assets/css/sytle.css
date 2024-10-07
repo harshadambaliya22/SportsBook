@@ -539,7 +539,9 @@ body {
 /* sidebar right end */
 
 /* main content start */
-
+.sb-main-content {
+    width: calc(100% - 563px);
+}
 .sb-hero-banner-section {
     margin-bottom: 27px;
 }
