@@ -127,25 +127,24 @@ $(document).ready(function () {
     });
 
     // language select
+    $("#headerLanguage").select2({
+        templateResult: headerLanguage,
+        templateSelection: headerLanguage,
+        dropdownCssClass: 'languageContainer',
+        selectionCssClass: 'languageDropdown',
+        minimumResultsForSearch: -1,
+        placeholder: "Select country",
+    });
+
     function headerLanguage(state) {
         if (!state.id) {
             return state.text;
         }
-        var currency = $(state.element).data("currency");
-
         var baseUrl = "assets/images/flags/";
         var $state = $('<span><img class="img-flag" /> <span class="country-name"></span></span>');
-        if (currency) {
-            $state.append('<span class="currency-name">' + currency + "</span>");
-        }
         $state.find(".country-name").text(state.text);
         $state.find("img").attr("src", baseUrl + state.element.value + ".png");
 
         return $state;
     }
-    $("#headerLanguage").select2({
-        templateResult: headerLanguage,
-        templateSelection: headerLanguage,
-        placeholder: "Select country",
-    });
 });
