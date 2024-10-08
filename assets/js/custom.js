@@ -10,7 +10,7 @@ $(document).ready(function () {
                 settings: {
                     arrows: false,
                     centerMode: true,
-                    centerPadding: "80px",
+                    centerPadding: "100px",
                     slidesToShow: 2,
                 },
             },
@@ -19,7 +19,7 @@ $(document).ready(function () {
                 settings: {
                     arrows: false,
                     centerMode: true,
-                    centerPadding: "80px",
+                    centerPadding: "90px",
                     slidesToShow: 1,
                 },
             },
@@ -119,5 +119,10 @@ $(document).ready(function () {
                 },
             },
         ],
+    });
+
+    // mobile menu
+    $(".navbar-toggler").on("click", function () {
+        $(".sb-site").toggleClass("menu-open");
     });
 });

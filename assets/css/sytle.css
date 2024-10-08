@@ -267,7 +267,9 @@ body {
 .navbar-nav .show > .nav-link {
     color: var(--white);
 }
-
+.sb-site.menu-open {
+    overflow: hidden;
+}
 /* =======main wrapper start====== */
 .sb-main-wrapper {
     display: flex;
@@ -352,11 +354,15 @@ body {
 .sb-sidebar-widget-link {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     text-decoration: none;
     font-size: 10px;
     font-weight: 500;
     color: var(--thm-color);
     transition: all 0.3s ease-in-out;
+}
+.sb-sidebar-widget-link-title {
+    display: flex;
 }
 
 .sb-sidebar-widget-link:hover {
@@ -375,6 +381,7 @@ body {
 
 #sidebarSportTab {
     padding: 12px 12px 0;
+    justify-content: space-between;
 }
 
 #sidebarSportTab .nav-link {
@@ -385,9 +392,9 @@ body {
     position: relative;
 }
 
-#sidebarSportTab .nav-item:not(:last-child) {
+/* #sidebarSportTab .nav-item:not(:last-child) {
     margin-right: 10px;
-}
+} */
 
 #sidebarSportTab .nav-link.active,
 #sidebarSportTab .show > .nav-link {
@@ -542,6 +549,9 @@ body {
 .sb-main-content {
     width: calc(100% - 563px);
 }
+.sb-main-content.w-full {
+    width: 100%;
+}
 .sb-hero-banner-section {
     margin-bottom: 27px;
 }
@@ -567,6 +577,7 @@ body {
 }
 .sb-hero-content .btn-primary {
     text-transform: capitalize;
+    border-radius: 50px;
 }
 .sb-upcoming-match-section {
     margin-bottom: 40px;
@@ -660,7 +671,8 @@ body {
     font-size: 14px;
     border-radius: 8px;
     font-weight: 500;
-    padding: 3px 12px 9px;
+    /* padding: 3px 12px 9px; */
+    padding: 3px 0px 9px;
 }
 
 .sb-sport-category-tab .nav-item {
@@ -1237,7 +1249,104 @@ body {
     color: var(--thm-hover);
 }
 /* user page end */
+.sb-bet-mobile-section {
+    margin-bottom: 32px;
+    display: none;
+}
+.sb-bet-mobile-tabs {
+    justify-content: space-between;
+    margin-bottom: 45px;
+}
 
+.sb-bet-mobile-tabs.nav-pills .nav-link.active,
+.sb-bet-mobile-tabs.nav-pills .show > .nav-link {
+    background-color: transparent;
+}
+.sb-bet-mobile-tabs.nav-pills .nav-link {
+    color: #212338;
+    font-family: var(--thm-font-b);
+    font-size: 20px;
+    padding: 0;
+}
+.sb-bet-mobile-tab-link-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sb-bet-mobile-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.sb-bet-mobile-item:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.sb-bet-mobile-link {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 10px;
+    width: 100%;
+    background: linear-gradient(to right, rgba(117, 42, 32, 1) 0%, rgba(255, 83, 64, 1) 100%);
+    padding: 20px;
+    color: var(--white);
+    box-shadow: inset 0 3.13px 3.13px 0 rgba(255, 255, 255, 0.25);
+    transition: all 0.3s ease-in-out;
+}
+.sb-bet-mobile-link-label {
+    display: inline-block;
+    font-size: 12px;
+    font-family: var(--thm-font-b);
+    margin-bottom: 5px;
+    color: var(--white);
+}
+.sb-bet-mobile-link-title {
+    font-size: 24px;
+    font-family: var(--thm-font-b);
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0;
+}
+.sb-bet-mobile-link-image {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+}
+
+.sb-game-mobile-section {
+    margin-bottom: 32px;
+    display: none;
+}
+.sb-game-mobile-section .sb-game-title {
+    font-size: 13px;
+}
+.sb-game-mobile-section .sb-game-item__inner {
+    width: auto;
+    height: 164px;
+}
+.sb-game-mobile-section .sb-game-content {
+    padding: 0 0 10px;
+}
+.sb-game-mobile-section .sb-game-badge {
+    padding: 2px 5px;
+    top: 5px;
+    right: 9px;
+    font-size: 10px;
+}
+.sb-game-mobile-section .sb-game-category-name {
+    font-size: 10px;
+}
+.sb-game-mobile-section .sb-game-image {
+    height: 100%;
+}
+.sb-game-mobile-section .sb-game-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
 /* ============casino page end============ */
 /* ========media query start=========== */
 
@@ -1274,6 +1383,30 @@ body {
         font-size: 40px;
     }
 }
+@media (max-width: 1199px) {
+    .sb-header-section .navbar-nav {
+        padding-left: 0;
+    }
+    .sb-header-right {
+        padding-right: 0px;
+    }
+    .sb-header-right-item:not(:last-child) {
+        margin-right: 20px;
+    }
+    .sb-main-wrapper {
+        margin: 0 12px 0 12px;
+        padding: 12px 0 12px;
+    }
+    .sb-main-content {
+        width: 100%;
+    }
+    .sb-left-sidebar {
+        display: none;
+    }
+    .sb-right-sidebar {
+        display: none;
+    }
+}
 @media (max-width: 991px) {
     .sb-header-promotion-item,
     .sb-heder-news-item {
@@ -1295,19 +1428,23 @@ body {
         margin: 0;
         padding: 24px 12px;
     }
+    .sb-hero-banner-section {
+        margin-bottom: 34px;
+    }
     .sb-hero-banner {
         position: relative;
         height: 405px;
         background-image: url("../images/main-banner.jpg");
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: right;
+        background-position: right -150px center;
     }
     .sb-hero-banner::after {
         content: "";
-        background: linear-gradient(to bottom, rgba(255, 83, 64, 0) 0%, rgba(255, 83, 64, 0.8) 100%);
+        /* background: linear-gradient(to bottom, rgba(255, 83, 64, 0) 0%, rgba(255, 83, 64, 1) 100%); */
+        background: linear-gradient(to bottom, rgba(255, 83, 64, 0) 0%, rgba(255, 83, 64, 1) 60%, rgba(255, 83, 64, 1) 100%);
         width: 100%;
-        height: 50%;
+        height: 70%;
         position: absolute;
         bottom: 0;
         left: 0;
@@ -1318,7 +1455,9 @@ body {
     .sb-hero-banner-section {
         border-radius: 30px;
         overflow: hidden;
+        box-shadow: 0 4px 4px 0 rgba(225, 83, 34, 0.36);
     }
+
     .sb-hero-content {
         text-align: center;
         top: unset;
@@ -1326,9 +1465,18 @@ body {
         bottom: 15px;
         transform: translateX(-50%);
         z-index: 1;
+        width: 100%;
     }
     .sb-hero-title {
         color: var(--white);
+        text-transform: capitalize;
+        max-width: 100%;
+        /* box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25); */
+    }
+    .sb-hero-content .btn-primary {
+        text-transform: capitalize;
+        min-width: 171px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     }
     .navbar-toggler {
         padding: 0;
@@ -1342,10 +1490,177 @@ body {
     .navbar-toggler-line {
         padding: 0;
         border: none;
-        width: 30px;
+        width: 20px;
         height: 2px;
         background-color: var(--white);
-        margin-bottom: 7px;
+        margin-bottom: 5px;
+        border-radius: 2px;
+    }
+    .navbar-toggler-line:last-child {
+        margin-bottom: 0;
+    }
+    .navbar-toggler {
+        position: relative;
+        z-index: 101;
+    }
+
+    .navbar-toggler[aria-expanded="true"] .navbar-toggler-line {
+        position: relative;
+        margin-bottom: 0;
+        transition: all ease-in-out 0.3s;
+        background-color: var(--thm-color);
+    }
+
+    .navbar-toggler[aria-expanded="true"] .navbar-toggler-line:nth-child(1) {
+        transform: rotate(45deg);
+    }
+
+    .navbar-toggler[aria-expanded="true"] .navbar-toggler-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .navbar-toggler[aria-expanded="true"] .navbar-toggler-line:nth-child(3) {
+        transform: rotate(-45deg);
+        bottom: 4px;
+    }
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+    }
+    .navbar-nav {
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff;
+    }
+    .navbar-nav .nav-link {
+        color: var(--thm-color);
+    }
+    .navbar-nav .nav-item:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 12px;
+    }
+    .navbar-nav .nav-link.active,
+    .navbar-nav .show > .nav-link {
+        color: var(--thm-color);
+    }
+    .sb-upcoming-match-slider .slick-list {
+        padding-left: 0 !important;
+    }
+    .sb-bet-mobile-section {
+        display: block;
+    }
+    .sb-game-mobile-section {
+        display: block;
+    }
+    .sb-game-mobile-section .sb-game-item__inner {
+        height: 220px;
+    }
+    .sb-upcoming-match-section {
+        margin-bottom: 0;
+    }
+    .sb-header-right .btn {
+        padding: 4px 14px;
+        font-size: 10px;
+        line-height: 1.1;
+    }
+    .sb-header-language-flag img {
+        width: 25px;
+        height: 19px;
+        object-fit: cover;
+    }
+    .sb-header-section .navbar {
+        padding: 12px 0;
+    }
+    .sb-footer-brand {
+        margin-bottom: 50px;
+    }
+    .sb-footer-block {
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 767px) {
+    .sb-hero-title {
+        font-size: 36px;
+    }
+    .sb-hero-banner::after {
+        background: linear-gradient(to bottom, rgba(255, 83, 64, 0) 0%, rgba(255, 83, 64, 1) 60%, rgba(255, 83, 64, 1) 100%);
+    }
+    .sb-hero-banner {
+        background-position: right -190px top;
+        background-size: auto;
+    }
+    .sb-footer-brand {
+        margin-bottom: 40px;
+    }
+    .sb-footer-brand-item:nth-child(1) {
+        order: 1;
+    }
+    .sb-footer-brand-item:nth-child(2) {
+        order: 2;
+    }
+    .sb-footer-brand-item:nth-child(3) {
+        order: 6;
+    }
+    .sb-footer-brand-item:nth-child(4) {
+        order: 3;
+    }
+    .sb-footer-brand-item:nth-child(5) {
+        order: 4;
+    }
+    .sb-footer-brand-item:nth-child(6) {
+        order: 5;
+    }
+    .sb-footer-brand-item:nth-child(7) {
+        order: 9;
+    }
+    .sb-footer-brand-item:nth-child(8) {
+        order: 7;
+    }
+    .sb-footer-brand-item:nth-child(9) {
+        order: 7;
+    }
+    .sb-footer-brand-item:nth-child(10) {
+        order: 10;
+    }
+    .sb-game-mobile-section .sb-game-item__inner {
+        height: 164px;
+    }
+    .sb-footer-brand-item:nth-child(1) img {
+        max-width: 110px;
+    }
+    .sb-footer-brand-item:nth-child(2) img {
+        max-width: 82px;
+    }
+    .sb-footer-brand-item:nth-child(3) img {
+        max-width: 32px;
+    }
+    .sb-footer-brand-item:nth-child(4) img {
+        max-width: 100px;
+    }
+    .sb-footer-brand-item:nth-child(5) img {
+        max-width: 99px;
+    }
+    .sb-footer-brand-item:nth-child(6) img {
+        max-width: 77px;
+    }
+    .sb-footer-brand-item:nth-child(7) img {
+        max-width: 68px;
+    }
+    .sb-footer-brand-item:nth-child(8) img {
+        max-width: 64px;
+    }
+    .sb-footer-brand-item:nth-child(9) img {
+        max-width: 116px;
+    }
+    .sb-footer-brand-item:nth-child(10) img {
+        max-width: 97px;
     }
 }
 /* ========media query end=========== */
