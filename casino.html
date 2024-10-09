@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
         <link rel="stylesheet" href="assets/css/all.min.css" />
         <link rel="stylesheet" href="assets/css/slick.css" />
+        <link rel="stylesheet" href="assets/css/select2.min.css" />
         <link rel="stylesheet" href="assets/css/sytle.css" />
     </head>
     <body class="sb-site casino">
@@ -16,7 +17,9 @@
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-lg">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                        <span class="navbar-toggler-line"></span>
+                        <span class="navbar-toggler-line"></span>
+                        <span class="navbar-toggler-line"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto">
@@ -30,7 +33,18 @@
                                 <a class="nav-link" href="#">LIVE CASINO</a>
                             </li>
                             <li class="nav-item has-submenu">
-                                <a class="nav-link" href="#"> MORE </a>
+                                <span class="nav-link"> MORE </span>
+                                <ul class="sb-sub-menu-list">
+                                    <li class="sb-sub-menu-item">
+                                        <a href="#" class="sb-sub-menu-link"> Game 1 </a>
+                                    </li>
+                                    <li class="sb-sub-menu-item">
+                                        <a href="#" class="sb-sub-menu-link"> Game 2 </a>
+                                    </li>
+                                    <li class="sb-sub-menu-item">
+                                        <a href="#" class="sb-sub-menu-link"> Game 3 </a>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </div>
@@ -39,14 +53,7 @@
                             <li class="sb-header-right-item sb-header-promotion-item">
                                 <a class="sb-header-right-link" href="#">
                                     <span class="sb-header-right-link-icon">
-                                        <svg width="23" height="23" viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M10.6375 0C5.78631 0.00472662 3.27629 0.0915193 1.68391 1.68391C0.0915193 3.27629 0.00472662 5.78631 0 10.6375H5.65069C5.24706 10.1334 4.94548 9.53868 4.78103 8.88084C4.16202 6.40481 6.40481 4.16202 8.88084 4.78103C9.53868 4.94548 10.1334 5.24706 10.6375 5.65069V0Z" />
-                                            <path d="M0 12.3626C0.00472662 17.2137 0.0915193 19.7237 1.68391 21.3161C3.27629 22.9085 5.78631 22.9953 10.6375 23V13.9423C9.74086 15.7332 7.88897 16.9627 5.74987 16.9627C5.27351 16.9627 4.88735 16.5765 4.88735 16.1002C4.88735 15.6238 5.27351 15.2377 5.74987 15.2377C7.51722 15.2377 8.99808 14.0109 9.38745 12.3626H0Z" />
-                                            <path d="M12.3626 23C17.2137 22.9953 19.7237 22.9085 21.3161 21.3161C22.9085 19.7237 22.9953 17.2137 23 12.3626H13.6125C14.0019 14.0109 15.4828 15.2377 17.2502 15.2377C17.7265 15.2377 18.1127 15.6238 18.1127 16.1002C18.1127 16.5765 17.7265 16.9627 17.2502 16.9627C15.111 16.9627 13.2591 15.7332 12.3626 13.9423V23Z" />
-                                            <path d="M23 10.6375C22.9953 5.78631 22.9085 3.27629 21.3161 1.68391C19.7237 0.0915193 17.2137 0.00472662 12.3626 0V5.65069C12.8668 5.24706 13.4614 4.94548 14.1191 4.78103C16.5953 4.16202 18.838 6.40481 18.219 8.88084C18.0545 9.53868 17.753 10.1334 17.3493 10.6375H23Z" />
-                                            <path d="M8.46245 6.45456C9.74074 6.77413 10.6375 7.92267 10.6375 9.24025V10.6375H9.24025C7.92267 10.6375 6.77413 9.74074 6.45456 8.46245C6.1514 7.24982 7.24982 6.1514 8.46245 6.45456Z" />
-                                            <path d="M12.3626 9.24025V10.6375H13.7597C15.0773 10.6375 16.2259 9.74074 16.5455 8.46245C16.8486 7.24982 15.7502 6.1514 14.5376 6.45456C13.2593 6.77413 12.3626 7.92267 12.3626 9.24025Z" />
-                                        </svg>
+                                        <img src="assets/images/promotion-icon.svg" alt="Promotion" />
                                     </span>
                                     <span class="sb-header-right-link-text">Promotions</span>
                                 </a>
@@ -54,30 +61,70 @@
                             <li class="sb-header-right-item sb-heder-news-item">
                                 <a class="sb-header-right-link" href="#">
                                     <span class="sb-header-right-link-icon">
-                                        <svg width="23" height="23" viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M10.6375 0C5.78631 0.00472662 3.27629 0.0915194 1.68391 1.68391C0.0915194 3.27629 0.00472662 5.78631 0 10.6375H5.65069C5.24706 10.1334 4.94548 9.53868 4.78103 8.88084C4.16202 6.40481 6.40481 4.16202 8.88084 4.78103C9.53868 4.94548 10.1334 5.24706 10.6375 5.65069V0Z" />
-                                            <path d="M0 12.3626C0.00472662 17.2137 0.0915194 19.7237 1.68391 21.3161C3.27629 22.9085 5.78631 22.9953 10.6375 23V13.9423C9.74086 15.7332 7.88897 16.9627 5.74987 16.9627C5.27351 16.9627 4.88735 16.5765 4.88735 16.1002C4.88735 15.6238 5.27351 15.2377 5.74987 15.2377C7.51722 15.2377 8.99808 14.0109 9.38745 12.3626H0Z" />
-                                            <path d="M12.3626 23C17.2137 22.9953 19.7237 22.9085 21.3161 21.3161C22.9085 19.7237 22.9953 17.2137 23 12.3626H13.6125C14.0019 14.0109 15.4828 15.2377 17.2502 15.2377C17.7265 15.2377 18.1127 15.6238 18.1127 16.1002C18.1127 16.5765 17.7265 16.9627 17.2502 16.9627C15.111 16.9627 13.2591 15.7332 12.3626 13.9423V23Z" />
-                                            <path d="M23 10.6375C22.9953 5.78631 22.9085 3.27629 21.3161 1.68391C19.7237 0.0915194 17.2137 0.00472662 12.3626 0V5.65069C12.8668 5.24706 13.4614 4.94548 14.1191 4.78103C16.5953 4.16202 18.838 6.40481 18.219 8.88084C18.0545 9.53868 17.753 10.1334 17.3493 10.6375H23Z" />
-                                            <path d="M8.46245 6.45456C9.74074 6.77413 10.6375 7.92267 10.6375 9.24025V10.6375H9.24025C7.92267 10.6375 6.77413 9.74074 6.45456 8.46245C6.1514 7.24982 7.24982 6.1514 8.46245 6.45456Z" />
-                                            <path d="M12.3626 9.24025V10.6375H13.7597C15.0773 10.6375 16.2259 9.74074 16.5455 8.46245C16.8486 7.24982 15.7502 6.1514 14.5376 6.45456C13.2593 6.77413 12.3626 7.92267 12.3626 9.24025Z" />
-                                        </svg>
+                                        <img src="assets/images/promotion-icon.svg" alt="Promotion" />
                                     </span>
                                     <span class="sb-header-right-link-text">News</span>
                                 </a>
                             </li>
                             <li class="sb-header-right-item sb-header-language has-submenu">
-                                <a class="sb-header-right-link" href="#">
-                                    <span class="sb-header-language-flag">
-                                        <img src="assets/images/header-flag.png" class="img-fluid" alt="language flag" />
-                                    </span>
-                                </a>
+                                <div class="sb-header-language-box">
+                                    <select class="form-control" id="headerLanguage">
+                                        <option value="Sesotho">Sesotho</option>
+                                        <option value="Português">Português</option>
+                                        <option value="Indonesia">Indonesia</option>
+                                        <option value="Lietuvių kalba">Lietuvių kalba</option>
+                                        <option value="עברית">עברית</option>
+                                        <option value="Norsk">Norsk</option>
+                                        <option value="Română">Română</option>
+                                        <option value="Italiano">Italiano</option>
+                                        <option value="Latviešu valoda">Latviešu valoda</option>
+                                        <option value="Hrvatski jezik">Hrvatski jezik</option>
+                                        <option value="Ўзбек">Ўзбек</option>
+                                        <option value="Svenska">Svenska</option>
+                                        <option value="Қазақ">Қазақ</option>
+                                        <option value="Македонски јазик">Македонски јазик</option>
+                                        <option value="Eesti keel">Eesti keel</option>
+                                        <option value="Tiếng Việt">Tiếng Việt</option>
+                                        <option value="Slovenčin">Slovenčin</option>
+                                        <option value="한국어">한국어</option>
+                                        <option value="Монгол хэл">Монгол хэл</option>
+                                        <option value="فارسی">فارسی</option>
+                                        <option value="漢語">漢語</option>
+                                        <option value="Soomaaliga">Soomaaliga</option>
+                                        <option value="Dutch">Dutch</option>
+                                        <option value="Bahasa Melayu">Bahasa Melayu</option>
+                                        <option value="Magyar nyelv">Magyar nyelv</option>
+                                        <option value="Dansk">Dansk</option>
+                                        <option value="Svenska">Svenska</option>
+                                        <option value="Русский">Русский</option>
+                                        <option value="తెలుగు">తెలుగు</option>
+                                        <option value="IsiZulu">IsiZulu</option>
+                                        <option value="Badînî">Badînî</option>
+                                        <option value="Српски језик">Српски језик</option>
+                                        <option value="Türkçe">Türkçe</option>
+                                        <option value="Africans">Africans</option>
+                                        <option value="Ελληνικά">Ελληνικά</option>
+                                        <option value="ไทย">ไทย</option>
+                                        <option value="Точики">Точики</option>
+                                        <option value="العربية">العربية</option>
+                                        <option value="Español">Español</option>
+                                        <option value="Kurdî">Kurdî</option>
+                                        <option value="Suomi">Suomi</option>
+                                        <option value="Polski">Polski</option>
+                                        <option value="Wikang Tagalog">Wikang Tagalog</option>
+                                        <option value="Беларуская мова">Беларуская мова</option>
+                                        <option value="Français">Français</option>
+                                        <option value="Shqip">Shqip</option>
+                                        <option value="Български">Български</option>
+                                        <option value="Українська мова">Українська мова</option>
+                                    </select>
+                                </div>
                             </li>
                             <li class="sb-header-right-item sb-header-signin">
-                                <a class="btn btn-light" href="#" data-bs-toggle="modal" data-bs-target="#sbLoginModal"> Sign In </a>
+                                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#sbLoginModal">Sign In</button>
                             </li>
                             <li class="sb-header-right-item sb-header-signup">
-                                <a class="btn btn-primary" href="#" data-bs-toggle="modal" data-bs-target="#sbRegisterModal"> Sign Up </a>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sbRegisterModal">Sign Up</button>
                             </li>
                         </ul>
                     </div>
@@ -115,7 +162,7 @@
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link" id="top-tab" data-bs-toggle="pill" data-bs-target="#top" type="button" role="tab" aria-controls="top" aria-selected="false">
                                         <span class="sb-game-tab-icon">
-                                            <img src="assets/images/star-tab-icon.svg" class="img-fluid" alt="tab Top icon" />
+                                            <img src="assets/images/star-tab-icon.png" class="img-fluid" alt="tab Top icon" />
                                         </span>
                                         <span class="sb-game-tab-text">Top</span>
                                     </button>
@@ -123,7 +170,7 @@
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link" id="slots-tab" data-bs-toggle="pill" data-bs-target="#slots" type="button" role="tab" aria-controls="slots" aria-selected="false">
                                         <span class="sb-game-tab-icon">
-                                            <img src="assets/images/slots-tab-icon.svg" class="img-fluid" alt="tab Slots icon" />
+                                            <img src="assets/images/slots-tab-icon.png" class="img-fluid" alt="tab Slots icon" />
                                         </span>
                                         <span class="sb-game-tab-text">Slots</span>
                                     </button>
@@ -131,7 +178,7 @@
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link" id="specials-tab" data-bs-toggle="pill" data-bs-target="#specials" type="button" role="tab" aria-controls="specials" aria-selected="false">
                                         <span class="sb-game-tab-icon">
-                                            <img src="assets/images/special-tab-icon.svg" class="img-fluid" alt="tab Specials icon" />
+                                            <img src="assets/images/special-tab-icon.png" class="img-fluid" alt="tab Specials icon" />
                                         </span>
                                         <span class="sb-game-tab-text">Specials</span>
                                     </button>
@@ -139,7 +186,7 @@
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link" id="top-table-games-tab" data-bs-toggle="pill" data-bs-target="#top-table-games" type="button" role="tab" aria-controls="top-table-games" aria-selected="false">
                                         <span class="sb-game-tab-icon">
-                                            <img src="assets/images/top-table-game-tab-icon.svg" class="img-fluid" alt="tab Top Table Games icon" />
+                                            <img src="assets/images/top-table-game-tab-icon.png" class="img-fluid" alt="tab Top Table Games icon" />
                                         </span>
                                         <span class="sb-game-tab-text">Top Table Games</span>
                                     </button>
@@ -147,7 +194,7 @@
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link" id="favorites-tab" data-bs-toggle="pill" data-bs-target="#favorites" type="button" role="tab" aria-controls="favorites" aria-selected="false">
                                         <span class="sb-game-tab-icon">
-                                            <img src="assets/images/favirito-tab-icon.svg" class="img-fluid" alt="tab Favorites icon" />
+                                            <img src="assets/images/favirito-tab-icon.png" class="img-fluid" alt="tab Favorites icon" />
                                         </span>
                                         <span class="sb-game-tab-text">Favorites</span>
                                     </button>
@@ -155,7 +202,7 @@
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link" id="free-spins-tab" data-bs-toggle="pill" data-bs-target="#free-spins" type="button" role="tab" aria-controls="free-spins" aria-selected="false">
                                         <span class="sb-game-tab-icon">
-                                            <img src="assets/images/free-spain-tab-icon.svg" class="img-fluid" alt="tab Free Spins icon" />
+                                            <img src="assets/images/free-spain-tab-icon.png" class="img-fluid" alt="tab Free Spins icon" />
                                         </span>
                                         <span class="sb-game-tab-text">Free Spins</span>
                                     </button>
@@ -163,7 +210,7 @@
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link" id="drops-Win-tab" data-bs-toggle="pill" data-bs-target="#drops-Win" type="button" role="tab" aria-controls="drops-Win" aria-selected="false">
                                         <span class="sb-game-tab-icon">
-                                            <img src="assets/images/dropwin-tab-icon.svg" class="img-fluid" alt="tab Drops&Win icon" />
+                                            <img src="assets/images/dropwin-tab-icon.png" class="img-fluid" alt="tab Drops&Win icon" />
                                         </span>
                                         <span class="sb-game-tab-text">Drops&Win</span>
                                     </button>
@@ -1054,6 +1101,7 @@
         <script src="assets/js/jquery-3.7.1.min.js"></script>
         <script src="assets/js/bootstrap.bundle.min.js"></script>
         <script src="assets/js/slick.min.js"></script>
+        <script src="assets/js/select2.min.js"></script>
         <script src="assets/js/custom.js"></script>
     </body>
 </html>

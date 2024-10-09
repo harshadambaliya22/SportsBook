@@ -125,13 +125,16 @@ $(document).ready(function () {
     $(".navbar-toggler").on("click", function () {
         $(".sb-site").toggleClass("menu-open");
     });
+    $(".navbar-nav .nav-link").on("click", function () {
+        $(this).parent().toggleClass("submenu-open");
+    });
 
     // language select
     $("#headerLanguage").select2({
         templateResult: headerLanguage,
         templateSelection: headerLanguage,
-        dropdownCssClass: 'languageContainer',
-        selectionCssClass: 'languageDropdown',
+        dropdownCssClass: "languageContainer",
+        selectionCssClass: "languageDropdown",
         minimumResultsForSearch: -1,
         placeholder: "Select country",
     });
