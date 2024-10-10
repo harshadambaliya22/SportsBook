@@ -1,6 +1,8 @@
 $(document).ready(function () {
+    if ($('[data-scrollbar]').length) {
+        Scrollbar.initAll();
+    }
     // scrollbar
-    Scrollbar.initAll();
 
     // upcoming match slider
     $(".sb-upcoming-match-slider").slick({
