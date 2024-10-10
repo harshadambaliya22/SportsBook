@@ -1,4 +1,7 @@
 $(document).ready(function () {
+    // scrollbar
+    Scrollbar.initAll();
+
     // upcoming match slider
     $(".sb-upcoming-match-slider").slick({
         centerMode: true,
@@ -36,14 +39,14 @@ $(document).ready(function () {
         slidesToScroll: 6,
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 1199,
                 settings: {
                     slidesToShow: 4,
                     slidesToScroll: 4,
                 },
             },
             {
-                breakpoint: 600,
+                breakpoint: 991,
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 3,
@@ -58,6 +61,7 @@ $(document).ready(function () {
             },
         ],
     });
+    // provider slider
     $(".sb-providers-slider").slick({
         dots: false,
         infinite: false,
@@ -66,10 +70,17 @@ $(document).ready(function () {
         slidesToScroll: 9,
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 1599,
                 settings: {
-                    slidesToShow: 6,
-                    slidesToScroll: 6,
+                    slidesToShow: 7,
+                    slidesToScroll: 7,
+                },
+            },
+            {
+                breakpoint: 1199,
+                settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 5,
                 },
             },
             {
@@ -98,14 +109,14 @@ $(document).ready(function () {
         slidesToScroll: 6,
         responsive: [
             {
-                breakpoint: 1024,
+                breakpoint: 1199,
                 settings: {
                     slidesToShow: 4,
                     slidesToScroll: 4,
                 },
             },
             {
-                breakpoint: 600,
+                breakpoint: 991,
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 3,
@@ -121,6 +132,78 @@ $(document).ready(function () {
         ],
     });
 
+    $(".sb-game-list-mobile-slider").slick({
+        // infinite: false,
+        centerMode: true,
+        centerPadding: "100px",
+        slidesToShow: 4,
+        responsive: [
+            {
+                breakpoint: 991,
+                settings: {
+                    centerMode: true,
+                    centerPadding: "90px",
+                    slidesToShow: 3,
+                },
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    centerMode: true,
+                    centerPadding: "60px",
+                    slidesToShow: 2,
+                },
+            },
+        ],
+    });
+
+    $(".sb-top-table-mobile-slider").slick({
+        centerMode: true,
+        centerPadding: "100px",
+        slidesToShow: 4,
+        responsive: [
+            {
+                breakpoint: 991,
+                settings: {
+                    centerMode: true,
+                    centerPadding: "90px",
+                    slidesToShow: 3,
+                },
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    centerMode: true,
+                    centerPadding: "60px",
+                    slidesToShow: 2,
+                },
+            },
+        ],
+    });
+
+    $(".sb-providers-mobile-slider").slick({
+        centerMode: true,
+        centerPadding: "100px",
+        slidesToShow: 4,
+        responsive: [
+            {
+                breakpoint: 991,
+                settings: {
+                    centerMode: true,
+                    centerPadding: "90px",
+                    slidesToShow: 3,
+                },
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    centerMode: true,
+                    centerPadding: "60px",
+                    slidesToShow: 2,
+                },
+            },
+        ],
+    });
     // mobile menu
     $(".navbar-toggler").on("click", function () {
         $(".sb-site").toggleClass("menu-open");
