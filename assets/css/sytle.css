@@ -2041,6 +2041,29 @@ body {
     border-radius: 20px;
     box-shadow: inset 0 -3px 4px 0 rgba(0, 0, 0, 0.25);
 }
+
+.sb-account-change-password {
+    width: 100%;
+    max-width: 624px;
+    margin: 0 auto;
+}
+
+.input-icon-group {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.sb-account-form .btn {
+    padding: 18px 15px;
+    text-transform: capitalize;
+}
 /* ============profile page end============ */
 /* ========media query start=========== */
 
