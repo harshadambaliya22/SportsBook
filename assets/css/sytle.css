@@ -1656,9 +1656,47 @@ body {
     color: var(--thm-color);
 }
 
+.sb-other-link-nav {
+    margin-bottom: 24px;
+    width: 100%;
+    overflow-x: auto;
+    background-color: var(--thm-color);
+    border-radius: 8px;
+}
+.sb-other-link-list {
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    width: 100%;
+    flex-wrap: nowrap;
+}
+
+.sb-other-link {
+    padding: 20px 20px;
+    border-radius: 8px;
+    display: inline-block;
+    background-color: var(--thm-color);
+    color: var(--white);
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 500;
+    text-wrap: nowrap;
+    transition: all 0.3s ease-in-out;
+}
+.sb-other-link:hover {
+    color: var(--thm-hover);
+}
+.sb-other-link.active {
+    background-color: var(--thm-hover);
+    color: var(--thm-color);
+}
+
 .sb-prematch-card {
     border-radius: 8px;
     overflow: hidden;
+    margin-bottom: 27px;
 }
 
 .sb-prematch-header {
@@ -1824,23 +1862,9 @@ body {
     fill: var(--white);
 }
 
-.sb-other-accordion-list {
-    list-style: none;
-    padding-left: 0;
-    margin-bottom: 0;
-    display: flex;
-    flex-wrap: wrap;
-}
 .sb-other-accordion-column {
-    width: calc(50% - 8px);
-    margin-right: 8px;
     margin-bottom: 15px;
 }
-.sb-other-accordion-column:nth-child(even) {
-    margin-right: 0px;
-    margin-left: 8px;
-}
-
 .other-accordion .accordion-item {
     border-radius: 10px;
     border: none;
@@ -1916,16 +1940,18 @@ body {
 .sb-account-link-nav {
     margin-bottom: 24px;
 }
+.sb-account-link-wrapper {
+    background-color: var(--thm-color);
+    width: 100%;
+    border-radius: 8px;
+}
 .sb-account-link-list {
     display: flex;
     align-items: center;
     padding-left: 0;
     margin-bottom: 0;
     list-style: none;
-    background-color: var(--thm-color);
-    border-radius: 8px;
     width: 100%;
-    overflow-x: auto;
     flex-wrap: nowrap;
 }
 
@@ -1962,11 +1988,14 @@ body {
     font-family: var(--thm-font-b);
     text-transform: uppercase;
 }
-.sb-account-tab {
+.sb-account-tab-wrapper {
+    width: auto;
     border: 1px solid var(--black);
     border-radius: 8px;
+}
+.sb-account-tab {
     flex-wrap: nowrap;
-    overflow-x: auto;
+    width: 100%;
 }
 
 .sb-account-tab .nav-link {
@@ -1975,8 +2004,8 @@ body {
     font-size: 14px;
     font-weight: 700;
     color: var(--black);
-    min-width: 180px;
     max-width: 100%;
+    text-wrap: nowrap;
 }
 
 .sb-account-tab .nav-link svg {
@@ -2042,12 +2071,6 @@ body {
     box-shadow: inset 0 -3px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
-.sb-account-change-password {
-    width: 100%;
-    max-width: 624px;
-    margin: 0 auto;
-}
-
 .input-icon-group {
     position: relative;
 }
@@ -2063,6 +2086,9 @@ body {
 .sb-account-form .btn {
     padding: 18px 15px;
     text-transform: capitalize;
+}
+.hide-password-icon {
+    display: none;
 }
 /* ============profile page end============ */
 /* ========media query start=========== */
@@ -2147,6 +2173,22 @@ body {
     .sb-user-title {
         font-size: 36px;
     }
+    .sb-account-title {
+        font-size: 26px;
+    }
+    .sb-account-content-body {
+        padding: 20px 8px;
+    }
+    .sb-account-form .form-control {
+        padding: 10px 15px;
+    }
+    .sb-account-form .btn {
+        padding: 13px 12px;
+        font-size: 14px;
+    }
+    .sb-account-link {
+        padding: 15px 20px;
+    }
 }
 @media (max-width: 1199px) {
     .sb-header-section .navbar-nav {
@@ -2182,6 +2224,20 @@ body {
     }
     .sb-casino-banner-section {
         margin-bottom: 50px;
+    }
+    .sb-account-title {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+    .sb-account-page-heading {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .sb-account-tab .nav-link {
+        padding: 12px 20px;
+    }
+    .sb-account-tab-wrapper {
+        width: 100%;
     }
 }
 @media (max-width: 991px) {
@@ -2537,6 +2593,9 @@ body {
     .sb-game-list-title {
         font-size: 24px;
     }
+    .sb-account-title {
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -2640,6 +2699,9 @@ body {
     }
     .sb-game-list-section.sb-top-table-section {
         margin-bottom: 20px;
+    }
+    .sb-account-title {
+        font-size: 18px;
     }
 }
 /* ========media query end=========== */

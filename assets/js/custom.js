@@ -1,8 +1,21 @@
 $(document).ready(function () {
-    if ($('[data-scrollbar]').length) {
+    if ($("[data-scrollbar]").length) {
         Scrollbar.initAll();
     }
     // scrollbar
+
+    $(".show-password-icon, .hide-password-icon").on("click", function () {
+        var passwordId = $(this).parents(".sb-account-form .input-icon-group").find("input").attr("id");
+        if ($(this).hasClass("show-password-icon")) {
+            $("#" + passwordId).attr("type", "text");
+            $(this).parent().find(".show-password-icon").hide();
+            $(this).parent().find(".hide-password-icon").show();
+        } else {
+            $("#" + passwordId).attr("type", "password");
+            $(this).parent().find(".hide-password-icon").hide();
+            $(this).parent().find(".show-password-icon").show();
+        }
+    });
 
     // upcoming match slider
     $(".sb-upcoming-match-slider").slick({
