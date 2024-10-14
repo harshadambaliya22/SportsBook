@@ -106,6 +106,15 @@ body {
     opacity: 0.9;
 }
 
+.form-control {
+    padding: 15px 15px;
+}
+.form-select {
+    padding: 15px 36px 15px 15px;
+}
+.input-icon-group .form-control {
+    padding: 15px 45px 15px 15px;
+}
 .form-control:focus,
 .form-select:focus {
     box-shadow: none;
@@ -1441,7 +1450,6 @@ body {
 .sb-user-form .form-select {
     background-color: #f0f0f0;
     border: none;
-    padding: 14px 24px;
     border-radius: 6px;
     color: var(--black);
 }
@@ -2046,7 +2054,6 @@ body {
 }
 
 .sb-account-form .form-control {
-    padding: 15px 15px;
     font-size: 15px;
     background-color: #6d6d6d;
     border-color: #49536c;
@@ -2179,8 +2186,19 @@ body {
     .sb-account-content-body {
         padding: 20px 8px;
     }
-    .sb-account-form .form-control {
+    .form-control {
         padding: 10px 15px;
+        font-size: 14px;
+    }
+    .form-select {
+        padding: 10px 36px 10px 10px;
+        font-size: 14px;
+    }
+    .input-icon-group .form-control {
+        padding: 10px 45px 10px 10px;
+    }
+    .sb-user-form .btn {
+        padding: 12px 20px;
     }
     .sb-account-form .btn {
         padding: 13px 12px;
@@ -2188,6 +2206,15 @@ body {
     }
     .sb-account-link {
         padding: 15px 20px;
+    }
+    .sb-other-link {
+        padding: 15px 20px;
+    }
+    .sb-prematch-upcoming-country-name {
+        font-size: 18px;
+    }
+    .sb-prematch-upcoming-time {
+        margin: 0 30px;
     }
 }
 @media (max-width: 1199px) {
@@ -2596,6 +2623,28 @@ body {
     .sb-account-title {
         font-size: 20px;
     }
+    .sb-prematch-body {
+    }
+    .sb-main-wrapper .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .form-control {
+        padding: 6px 12px;
+    }
+    .form-select {
+        padding: 6px 36px 6px 6px;
+    }
+    .input-icon-group .form-control {
+        padding: 6px 36px 6px 6px;
+    }
+
+    .input-icon {
+        right: 10px;
+    }
+    .sb-user-form .btn {
+        padding: 8px 16px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -2702,6 +2751,9 @@ body {
     }
     .sb-account-title {
         font-size: 18px;
+    }
+    .sb-user-title {
+        font-size: 20px;
     }
 }
 /* ========media query end=========== */
