@@ -248,4 +248,26 @@ $(document).ready(function () {
 
         return $state;
     }
+
+    // country mobile number
+    $("#countryMobileNumber").select2({
+        templateResult: countryMobileNumber,
+        templateSelection: countryMobileNumber,
+        dropdownCssClass: "countryNumberContainer",
+        selectionCssClass: "countryNumberDropdown",
+        minimumResultsForSearch: -1,
+        placeholder: "Select country",
+    });
+
+    function countryMobileNumber(state) {
+        if (!state.id) {
+            return state.text;
+        }
+        var baseUrl = "assets/images/flags/";
+        var $state = $('<span><img class="img-flag" /> <span class="country-name"></span></span>');
+        $state.find(".country-name").text(state.text);
+        $state.find("img").attr("src", baseUrl + state.element.value + ".png");
+
+        return $state;
+    }
 });
