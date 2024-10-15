@@ -558,12 +558,12 @@ body {
     height: 12px;
 }
 
-#sidebarSportTab {
+.sidebar-sport-tab {
     padding: 12px 12px 0;
     justify-content: space-between;
 }
 
-#sidebarSportTab .nav-link {
+.sidebar-sport-tab .nav-link {
     font-size: 11px;
     font-family: var(--thm-font-b);
     padding: 0;
@@ -571,17 +571,17 @@ body {
     position: relative;
 }
 
-/* #sidebarSportTab .nav-item:not(:last-child) {
+/* .sidebar-sport-tab .nav-item:not(:last-child) {
     margin-right: 10px;
 } */
 
-#sidebarSportTab .nav-link.active,
-#sidebarSportTab .show > .nav-link {
+.sidebar-sport-tab .nav-link.active,
+.sidebar-sport-tab .show > .nav-link {
     color: var(--thm-primary);
     background-color: unset;
 }
-#sidebarSportTab .nav-link.active::after,
-#sidebarSportTab .show > .nav-link::after {
+.sidebar-sport-tab .nav-link.active::after,
+.sidebar-sport-tab .show > .nav-link::after {
     content: "";
     width: 100%;
     height: 2px;
@@ -1874,7 +1874,6 @@ body {
     display: none;
 }
 .sb-prematch-upcoming-mobile-info {
-    display: flex;
     justify-content: space-between;
     width: 100%;
     margin-top: 5px;
@@ -1896,15 +1895,36 @@ body {
     list-style: none;
     padding-left: 0;
     margin-bottom: 0;
-    display: flex;
+    margin-top: 25px;
+    display: none;
     align-items: center;
 }
 .sb-prematch-score-info-item {
-    padding: 6px;
+    padding: 2px 4px 4px;
     min-width: 110px;
     width: 100%;
     border-radius: 4px;
     background-color: var(--thm-color);
+    text-align: center;
+    line-height: 1;
+}
+.sb-prematch-score-info-item:not(:last-child) {
+    margin-right: 7px;
+}
+.sb-prematch-score-lebel {
+    color: var(--thm-hover);
+    font-size: 8px;
+    font-family: var(--thm-font-b);
+    margin-bottom: 3px;
+    display: inline-block;
+    line-height: 1;
+}
+.sb-prematch-score-text {
+    font-size: 15px;
+    font-family: var(--thm-font-b);
+    color: var(--white);
+    margin-bottom: 0;
+    line-height: 1;
 }
 .sb-other-tab-wrapper {
     background-color: #1b1b1b;
@@ -2029,6 +2049,44 @@ body {
     color: var(--white);
     font-size: 11px;
     margin-bottom: 0;
+}
+
+.sb-sport-tab-mobile-wrapper {
+    display: flex;
+}
+.sb-sport-tab-mobile {
+    background-color: var(--thm-color);
+    border-radius: 8px;
+    border: 1px solid var(--thm-hover);
+}
+
+.sb-sport-tab-mobile .nav-link {
+    padding: 12px 15px;
+    color: var(--white);
+}
+.sb-sport-tab-mobile .nav-link.active {
+    background-color: var(--thm-hover);
+    color: var(--thm-color);
+}
+
+.sb-sport-tab-mobile-search-btn {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 10px;
+    border: 1px solid var(--thm-hover);
+    background-color: var(--thm-color);
+    color: #959595;
+    padding: 0;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.sb-sport-tab-mobile-search-btn:hover,
+.sb-sport-tab-mobile-search-btn:active {
+    border: 1px solid var(--thm-hover) !important;
+    background-color: var(--thm-color) !important;
+    color: #959595 !important;
 }
 /* ============prematch page end============ */
 /* ============profile page Start============ */
@@ -2747,6 +2805,14 @@ body {
     .sb-prematch-upcoming-time-text {
         font-size: 24px;
     }
+    .sb-other-tab .nav-link {
+        padding: 15px 12px;
+    }
+    .sb-other-tab-collapse-btn {
+        width: 48px;
+        height: 48px;
+        line-height: 48px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -2886,7 +2952,7 @@ body {
         margin-bottom: 0;
     }
     .sb-prematch-upcoming-mobile-info {
-        display: block;
+        display: flex;
     }
     .sb-user-image-desktop {
         display: none;
@@ -2916,6 +2982,12 @@ body {
     }
     .sb-register-model .sb-user-conetent {
         padding: 0 12px 20px;
+    }
+    .sb-prematch-score-info-list {
+        display: flex;
+    }
+    .sb-other-link-nav {
+        display: none !important;
     }
 }
 /* ========media query end=========== */

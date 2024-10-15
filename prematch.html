@@ -276,7 +276,7 @@
                             </span>
                             <h5 class="sb-sidebar-widget-title-text">Sports</h5>
                         </div>
-                        <ul class="nav nav-pills" id="sidebarSportTab" role="tablist">
+                        <ul class="nav nav-pills sidebar-sport-tab" id="sidebarSportTab" role="tablist">
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link active" id="sport-all-tab" data-bs-toggle="pill" data-bs-target="#sport-all" type="button" role="tab" aria-controls="sport-all" aria-selected="true">All</button>
                             </li>
@@ -1164,6 +1164,173 @@
                         </ul>
                     </div>
                     <!-- other link nav end -->
+                    <!-- mobile sport tab start -->
+                    <div class="sb-sport-tab-mobile-section">
+                        <div class="sb-sport-tab-mobile-wrapper">
+                            <ul class="nav nav-pills sb-sport-tab-mobile" id="SportTabMobile" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="sport-all-mobile-tab" data-bs-toggle="pill" data-bs-target="#sport-all-mobile" type="button" role="tab" aria-controls="sport-all-mobile" aria-selected="true">All</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="sport-1h-mobile-tab" data-bs-toggle="pill" data-bs-target="#sport-1h-mobile" type="button" role="tab" aria-controls="sport-1h-mobile" aria-selected="false">1h</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="sport-3h-mobile-tab" data-bs-toggle="pill" data-bs-target="#sport-3h-mobile" type="button" role="tab" aria-controls="sport-3h-mobile" aria-selected="false">3h</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="sport-6h-tab" data-bs-toggle="pill" data-bs-target="#sport-6h" type="button" role="tab" aria-controls="sport-6h" aria-selected="false">6h</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="sport-12h-mobile-tab" data-bs-toggle="pill" data-bs-target="#sport-12h-mobile" type="button" role="tab" aria-controls="sport-12h-mobile" aria-selected="false">12h</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="sport-24h-mobile-tab" data-bs-toggle="pill" data-bs-target="#sport-24h-mobile" type="button" role="tab" aria-controls="sport-24h-mobile" aria-selected="false">24h</button>
+                                </li>
+                            </ul>
+                            <div class="sb-sport-tab-mobile-search">
+                                <button type="button" class="btn sb-sport-tab-mobile-search-btn">
+                                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.70833 15.0417C12.2061 15.0417 15.0417 12.2061 15.0417 8.70833C15.0417 5.21053 12.2061 2.375 8.70833 2.375C5.21053 2.375 2.375 5.21053 2.375 8.70833C2.375 12.2061 5.21053 15.0417 8.70833 15.0417Z" stroke="#959595" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M16.6254 16.6249L13.1816 13.1812" stroke="#959595" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="tab-content sb-sport-tab-content-mobile" id="SportTabMobileContent">
+                            <div class="tab-pane fade show active" id="sport-all-mobile" role="tabpanel" aria-labelledby="sport-all-mobile-tab" tabindex="0">
+                                <ul class="sb-sidebar-widget-list">
+                                    <li class="sb-sidebar-widget-item">
+                                        <a href="#" class="sb-sidebar-widget-link">
+                                            <div class="sb-sidebar-widget-link-title">
+                                                <span class="sb-sidebar-widget-link-icon">
+                                                    <img src="assets/images/favorite-star-mobile-icon.png" class="img-fluid" alt="sidebar Favorite icon" />
+                                                </span>
+                                                <span class="sb-sidebar-widget-link-text">Favorites</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="sb-sidebar-widget-item">
+                                        <a href="#" class="sb-sidebar-widget-link">
+                                            <div class="sb-sidebar-widget-link-title">
+                                                <span class="sb-sidebar-widget-link-icon">
+                                                    <img src="assets/images/sidebar-football-icon-1.png" class="img-fluid" alt="sidebar Football icon" />
+                                                </span>
+                                                <span class="sb-sidebar-widget-link-text">Football</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="sb-sidebar-widget-item">
+                                        <a href="#" class="sb-sidebar-widget-link">
+                                            <div class="sb-sidebar-widget-link-title">
+                                                <span class="sb-sidebar-widget-link-icon">
+                                                    <img src="assets/images/basket-icon.png" class="img-fluid" alt="sidebar Basketball icon" />
+                                                </span>
+                                                <span class="sb-sidebar-widget-link-text">Basketball</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="sb-sidebar-widget-item">
+                                        <a href="#" class="sb-sidebar-widget-link">
+                                            <div class="sb-sidebar-widget-link-title">
+                                                <span class="sb-sidebar-widget-link-icon">
+                                                    <img src="assets/images/tenis-tab-icon.png" class="img-fluid" alt="sidebar volleyball icon" />
+                                                </span>
+                                                <span class="sb-sidebar-widget-link-text">Tenis</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="sb-sidebar-widget-item">
+                                        <a href="#" class="sb-sidebar-widget-link">
+                                            <div class="sb-sidebar-widget-link-title">
+                                                <span class="sb-sidebar-widget-link-icon">
+                                                    <img src="assets/images/hocky-icon.png" class="img-fluid" alt="sidebar Hockey icon" />
+                                                </span>
+                                                <span class="sb-sidebar-widget-link-text">Hockey</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab-pane fade" id="sport-1h-mobile" role="tabpanel" aria-labelledby="sport-1h-mobile-tab" tabindex="0">
+                                <ul class="sb-sidebar-widget-list">
+                                    <li class="sb-sidebar-widget-item">
+                                        <a href="#" class="sb-sidebar-widget-link">
+                                            <div class="sb-sidebar-widget-link-title">
+                                                <span class="sb-sidebar-widget-link-icon">
+                                                    <img src="assets/images/footsal-icon.png" class="img-fluid" alt="sidebar football icon" />
+                                                </span>
+                                                <span class="sb-sidebar-widget-link-text">football</span>
+                                            </div>
+                                            <span class="sb-sidebar-widget-link-count">682</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab-pane fade" id="sport-3h-mobile" role="tabpanel" aria-labelledby="sport-3h-mobile-tab" tabindex="0">
+                                <ul class="sb-sidebar-widget-list">
+                                    <li class="sb-sidebar-widget-item">
+                                        <a href="#" class="sb-sidebar-widget-link">
+                                            <div class="sb-sidebar-widget-link-title">
+                                                <span class="sb-sidebar-widget-link-icon">
+                                                    <img src="assets/images/footsal-icon.png" class="img-fluid" alt="sidebar Futsal icon" />
+                                                </span>
+                                                <span class="sb-sidebar-widget-link-text">Futsal </span>
+                                            </div>
+                                            <span class="sb-sidebar-widget-link-count">682</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab-pane fade" id="sport-6h" role="tabpanel" aria-labelledby="sport-6h-tab" tabindex="0">
+                                <ul class="sb-sidebar-widget-list">
+                                    <li class="sb-sidebar-widget-item">
+                                        <a href="#" class="sb-sidebar-widget-link">
+                                            <div class="sb-sidebar-widget-link-title">
+                                                <span class="sb-sidebar-widget-link-icon">
+                                                    <img src="assets/images/tennis-icon.png" class="img-fluid" alt="sidebar Tennis icon" />
+                                                </span>
+                                                <span class="sb-sidebar-widget-link-text">Tennis</span>
+                                            </div>
+                                            <span class="sb-sidebar-widget-link-count">682</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab-pane fade" id="sport-12h-mobile" role="tabpanel" aria-labelledby="sport-12h-mobile-tab" tabindex="0">
+                                <ul class="sb-sidebar-widget-list">
+                                    <li class="sb-sidebar-widget-item">
+                                        <a href="#" class="sb-sidebar-widget-link">
+                                            <div class="sb-sidebar-widget-link-title">
+                                                <span class="sb-sidebar-widget-link-icon">
+                                                    <img src="assets/images/tennis-icon.png" class="img-fluid" alt="sidebar Tennis icon" />
+                                                </span>
+                                                <span class="sb-sidebar-widget-link-text">Tennis</span>
+                                            </div>
+                                            <span class="sb-sidebar-widget-link-count">682</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="tab-pane fade" id="sport-24h-mobile" role="tabpanel" aria-labelledby="sport-24h-mobile-tab" tabindex="0">
+                                <ul class="sb-sidebar-widget-list">
+                                    <li class="sb-sidebar-widget-item">
+                                        <a href="#" class="sb-sidebar-widget-link">
+                                            <div class="sb-sidebar-widget-link-title">
+                                                <span class="sb-sidebar-widget-link-icon">
+                                                    <img src="assets/images/tennis-icon.png" class="img-fluid" alt="sidebar Tennis icon" />
+                                                </span>
+                                                <span class="sb-sidebar-widget-link-text">Tennis</span>
+                                            </div>
+                                            <span class="sb-sidebar-widget-link-count">682</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- mobile sport tab end -->
+
                     <!-- other content wrapper start -->
                     <div class="sb-other-content-wrapper">
                         <div class="sb-prematch-card">
